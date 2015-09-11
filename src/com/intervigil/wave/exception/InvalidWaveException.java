@@ -1,13 +1,12 @@
-/* LameApplication.java
-   A port of LAME for Android
+/* InvalidWaveException.java
 
-   Copyright (c) 2010 Ethan Chen
+   Copyright (c) 2011 Ethan Chen
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Lesser General Public
    License as published by the Free Software Foundation; either
    version 2 of the License, or (at your option) any later version.
-	
+
    This library is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
@@ -18,14 +17,22 @@
    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-package com.intervigil.lame;
+package com.intervigil.wave.exception;
 
-import android.app.Application;
+import java.io.IOException;
 
-public class LameApplication extends Application {
+public class InvalidWaveException extends IOException {
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
+    /**
+     * Generated serialVersionUID
+     */
+    private static final long serialVersionUID = -8229742633848759378L;
+    
+    public InvalidWaveException() {
+        
+    }
+
+    public InvalidWaveException(String msg) {
+        super(msg);
     }
 }
