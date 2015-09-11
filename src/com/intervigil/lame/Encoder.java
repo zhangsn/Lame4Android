@@ -93,9 +93,10 @@ public class Encoder {
             // TODO: write Xing VBR/INFO tag to mp3 file here
             out.flush();
         }
+        cleanup();
     }
 
-    public void cleanup() {
+    private void cleanup() {
         try {
             if (waveReader != null) {
                 waveReader.closeWaveFile();

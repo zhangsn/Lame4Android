@@ -107,9 +107,10 @@ public class Decoder {
                 }
             }
         }
+        cleanup();
     }
 
-    public void cleanup() {
+    private void cleanup() {
         try {
             if (waveWriter != null) {
                 waveWriter.closeWaveFile();
